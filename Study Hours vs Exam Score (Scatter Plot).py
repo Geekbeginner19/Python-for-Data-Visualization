@@ -13,15 +13,21 @@
 import matplotlib.pyplot as plt
 import numpy as np 
 
-ExamScores = np.random.randint(45, 85, 10)
-StudyHours = np.random.randint(5, 10, 10)
+ExamScores = np.random.normal(45, 85, 100)
+StudyHours = np.random.normal(5, 10, 100)
+color = np.random.uniform(0, 1, 100) #Randomising colors 
 
 font1 = {"family" : "serif", "color" : "blue", "size" : 20}
 font2 = {"family" : "verdana", "color" : "green", "size" : 15}
 
-plt.scatter(StudyHours, ExamScores, color = "r")
-plt.xlabel("StudyHours", fontdict = font2)
-plt.ylabel("Exam Scores", fontdict = font2)
+#Adding Color Conditions
+# colorCondition = ExamScores > 70
+# colors = np.where(colorCondition, "blue", "red")
+
+plt.scatter(ExamScores, StudyHours, c = color, cmap = "viridis") #adding cmaps 
+plt.colorbar() #Adding a color bar
+plt.xlabel("Exam Scores", fontdict = font2)
+plt.ylabel("Study Hours", fontdict = font2)
 plt.title("Study Hours vs Exam Score", fontdict = font1)
 plt.show()
 
