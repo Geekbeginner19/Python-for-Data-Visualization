@@ -18,11 +18,11 @@ font1 = {"family": "verdana", "color" : "red", "size" : 20}
 font2 = {"family": "serif", "color" : "green", "size" : 15}
 
 #ONLY MEAN NEEDED
-combProd = product_A + product_B
+combProd = product_A + product_B #Combined Sales of Products, A and B
 mean = np.mean(combProd)
 # standardDev = np.std(combProd)
 
-plt.hist([product_A, product_B], color = ["#1f77b4", "#ff7f0e"], label = ["Product A", "Product B"], alpha = 0.8)
+plt.hist(combProd, color = "green", label = "Combined Product Sales", alpha = 0.8, edgecolor = "black")
 plt.axvline(mean, color = "k", linestyle = "dashed", label = "Mean Line")
 # plt.axvline(mean + standardDev, color = "r", linestyle = "dashed", label = "std+")
 # plt.axvline(mean - standardDev, color = "g", linestyle = "dashed", label = "std-")
