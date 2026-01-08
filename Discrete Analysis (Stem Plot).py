@@ -21,5 +21,5 @@ font2 = {"family": "serif", "color" : "green", "size" : 15}
 plt.stem(months, product_A, linefmt = "b-.", markerfmt = "r", basefmt = "r")
 plt.title("Discrete Analysis", fontdict = font1)
 plt.xlabel("Months", fontdict = font2)
-plt.ylabel("Product", fontdict = font2)
+plt.ylabel("Product A", fontdict = font2)
 plt.show()
