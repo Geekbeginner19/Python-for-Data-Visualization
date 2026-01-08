@@ -22,7 +22,7 @@ import statistics as stats
 ClassAScores = np.arange(10, 310, 10)
 ClassBScores = np.arange(10, 210, 10)
 
-scores = ClassAScores + ClassBScores
+#scores = ClassAScores + ClassBScores
 
 font1 = {"family": "verdana", "color" : "red", "size" : 20}
 font2 = {"family": "serif", "color" : "green", "size" : 15}
