@@ -17,13 +17,15 @@
 
 import plotly.express as px #For plotting information
 import pandas as pd #For processing data
+import cufflinks as cf #Cufflinks is really old and poorly maintained by DEVs so it's not reliable at all
+cf.go_offline() #Makes no difference when omitted
 
 #Creating a DataFrame to process the original data (Original Data HAS to be converted to a dictionary)
 df = pd.DataFrame({'Days' : ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
 'Hours_spent' : [5, 7, 3, 8, 5, 1, 6]
 })
 #Plotting the data
-figure = px.line(df, x = 'Days', y = 'Hours_spent', title = 'Weekly Phone Usage (Using Pandas)', color_discrete_sequence = ["royalblue"], template = "plotly_dark")
+figure = px.line(df, x = 'Days', y = 'Hours_spent', title = 'Weekly Phone Usage (Using Pandas)', color_discrete_sequence = ["lightblue"], template = "plotly_dark")
 
 #Adding Markers to Lines (Plotly expects NO SPACES in the mode string) 
 figure.update_traces(mode = "lines+markers")
